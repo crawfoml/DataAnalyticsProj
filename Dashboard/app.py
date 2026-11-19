@@ -22,11 +22,6 @@ and inspect the history of standard vs. high-severity violations.
 def load_data():
     # Use a relative path for GitHub / Streamlit Cloud deployment
     file_path = 'cleaned_violations_data.csv'
-
-    import os
-    if not os.path.exists(file_path):
-        file_path = '/content/cleaned_violations_data.csv' # Fallback for Colab
-
     df = pd.read_csv(file_path)
     df['Issue Date'] = pd.to_datetime(df['Issue Date'])
     df['Year'] = df['Issue Date'].dt.year
