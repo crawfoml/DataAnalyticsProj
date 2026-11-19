@@ -20,13 +20,8 @@ and inspect the history of standard vs. high-severity violations.
 # Load the cleaned dataset
 @st.cache_data
 def load_data():
-    # Explicitly using the local path you requested
-    file_path = 'C:/Users/mitch/dashboard/cleaned_violations_data.csv'
-    
-    import os
-    if not os.path.exists(file_path):
-        file_path = '/content/cleaned_violations_data.csv' # Fallback for Colab
-
+    # Use a relative path for GitHub / Streamlit Cloud deployment
+    file_path = 'cleaned_violations_data.csv'
     df = pd.read_csv(file_path)
     df['Issue Date'] = pd.to_datetime(df['Issue Date'])
     df['Year'] = df['Issue Date'].dt.year
