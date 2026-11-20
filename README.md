@@ -28,7 +28,7 @@ Explore the interactive data dashboard here: **[Insert your Streamlit Cloud App 
 ## How to Run Locally
 1. Clone this repository: `git clone https://github.com/crawfoml/DataAnalyticsProj`
 2. Install the required dependencies: `pip install -r requirements.txt`
-3. Launch the Streamlit dashboard: `streamlit run app.py`
+3. Launch the Streamlit dashboard: [`streamlit run app.py`](https://dataanalyticsproj-yqsjjbacanxc9y2ezflz6a.streamlit.app/)
 
 ## Contributors
 * Mitchell Crawford / Parker Roan
