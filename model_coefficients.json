@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "year_center": 2014,
+    "last_full_year": 2024,
+    "latest_date": "2025-05-12",
+    "window_days": 730,
+    "reference": {
+      "cornerstone": "Mitigating Systems",
+      "idby": "NRC - Identified",
+      "region": "1"
+    },
+    "rate_out_of_time_mae": 3.82,
+    "rate_naive_mae": 3.92,
+    "severity_out_of_time_auc": 0.638,
+    "severity_base_rate": 0.0478
+  },
+  "rate": {
+    "intercept": 4.157963054957162,
+    "region": {
+      "2": -0.2515023419751665,
+      "3": 1.6118012009754699,
+      "4": 3.774733144421905
+    },
+    "year_c": -0.2347262273929731,
+    "findings_lag1": 0.3795370392697426,
+    "findings_lag2": 0.15345495251035585,
+    "high_lag1": 0.14808962762898684
+  },
+  "severity": {
+    "intercept": -3.889512390826774,
+    "cornerstone": {
+      "Barrier Integrity": -1.555541557888726,
+      "Emergency Preparedness": 1.964023081507244,
+      "Initiating Events": -0.4551197090763589,
+      "Misc": -1.6058828169006523,
+      "Occupational Radiation Safety": -0.6529447222812407,
+      "Public Radiation Safety": 0.6447621080026438,
+      "Security": 1.157258681015379
+    },
+    "idby_self_revealed": -0.05693183441155907,
+    "region": {
+      "2": 0.5882584816667962,
+      "3": 0.2061537913287507,
+      "4": -0.2992837096354313
+    },
+    "year_c": -0.018437737011062303,
+    "minor_24m": 0.014182092108370152,
+    "minor_24m_sq": -0.00019088225904468915,
+    "hp_24m": -0.008970333612287242,
+    "pi_24m": -0.0065944038045648275,
+    "high_24m": 0.1865402892115254
+  }
+}
