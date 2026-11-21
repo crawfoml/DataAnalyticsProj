@@ -110,7 +110,7 @@ with tab_q:
                       legend=dict(orientation="h", y=-0.2))
     show(fig)
     st.caption(
-        "The dashboard fits no models. It reads the coefficients saved by DataAnalyticsFinalProj.ipynb "
+        "The dashboard fits no models. It reads the coefficients saved by data_analytics_final_proj.ipynb "
         "(model_coefficients.json), so every prediction here matches the notebook."
     )
 

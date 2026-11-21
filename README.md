@@ -6,17 +6,17 @@ This project is an end-to-end exploratory data analysis (EDA) of the NRC Inspect
 **Short answer.** Yes for how many findings a site gets, and only weakly for how serious they are.
 
 ## Live dashboard
-Explore the interactive dashboard here: **[Insert your Streamlit Cloud App URL here once deployed]**
+Explore the interactive dashboard here: **https://crawfoml.github.io/DataAnalyticsProj/**. It runs entirely in your browser and takes about a minute to load the first time.
 
 The dashboard has four tabs. **The question** gives the answer and the national trend. **Site history** shows any site's findings per year next to the model's one-year-ahead prediction. **Severity risk** estimates the chance that a new finding is high-severity, starting from the chosen site's own recent history. **Explore findings** has the filterable charts and data table. The dashboard fits no models. It reads the coefficients the notebook saves, so its numbers match the analysis.
 
 ## Repository structure
-* `DataAnalyticsFinalProj.ipynb` is the full analysis. Its sections follow the project document outline (introduction, dataset and quality, cleaning, visualizations and findings, conclusions, references). It also writes `cleaned_violations_data.csv` and `model_coefficients.json`.
+* `data_analytics_final_proj.ipynb` is the full analysis. Its sections follow the project document outline (introduction, dataset and quality, cleaning, visualizations and findings, conclusions, references). It also writes `cleaned_violations_data.csv` and `model_coefficients.json`.
 * `cleaned_violations_data.csv` is the cleaned finding-level dataset that the dashboard reads.
 * `model_coefficients.json` holds the fitted model coefficients that the dashboard reads.
 * `app.py` is the Streamlit dashboard, and `nrc_model.py` holds the prediction functions it shares with the notebook. The notebook checks them against statsmodels.
-* `raw-findings-violations-dataset.xlsx` is the raw NRC export, and `findings-violations-data-dictionary.xlsx` is the NRC's field list.
-* `requirements.txt` lists the packages the dashboard needs. `requirements-analysis.txt` adds the packages the notebook needs.
+* `findings_violations_dataset.xlsx` is the raw NRC export, and `findings_violations_data_dictionary.xlsx` is the NRC's field list.
+* `requirements.txt` lists the packages the dashboard needs. `requirements_analysis.txt` adds the packages the notebook needs.
 
 ## Methodology
 1. **Cleaning.** 819 rows stored `Issue Date` as an Excel serial number, which a plain date parse reads as 1970. We convert them to their real dates (July 1999 to May 2001) instead of dropping them, so the dataset keeps all 18,240 findings. We also fill missing site codes and create a binary `High_Severity` target (Green = 0; White, Yellow, Red, or Greater Than Green = 1).
@@ -37,9 +37,9 @@ The dashboard has four tabs. **The question** gives the answer and the national 
 ## How to run locally
 1. Clone this repository: `git clone https://github.com/crawfoml/DataAnalyticsProj`
 2. Create and activate a virtual environment: `python3 -m venv .venv && source .venv/bin/activate`
-3. Install the dashboard's packages with `pip install -r requirements.txt`, or use `pip install -r requirements-analysis.txt` to also run the notebook.
-4. Launch the Streamlit dashboard: [`streamlit run app.py`](https://dataanalyticsproj-yqsjjbacanxc9y2ezflz6a.streamlit.app/)
-5. Open the notebook with `jupyter lab DataAnalyticsFinalProj.ipynb`. It reads the raw xlsx from the repository root. In Google Colab, upload the xlsx first.
+3. Install the dashboard's packages with `pip install -r requirements.txt`, or use `pip install -r requirements_analysis.txt` to also run the notebook.
+4. Launch the Streamlit dashboard: `streamlit run app.py`
+5. Open the notebook with `jupyter lab data_analytics_final_proj.ipynb`. It reads the raw xlsx from the repository root. In Google Colab, upload the xlsx first.
 
 ## Contributors
 * Mitchell Crawford / Parker Roan

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>NRC findings: does history predict the future?</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@stlite/browser@0.83.0/build/stlite.css" />
+    <style>
+      body { margin: 0; }
+      #loading { font-family: system-ui, sans-serif; padding: 2rem 1rem; max-width: 40rem; margin: 0 auto; color: #444; }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="loading">
+        <strong>Loading the dashboard.</strong> It runs Python in your browser, so the first load takes up to a minute.
+      </div>
+    </div>
+    <script type="module">
+      import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@0.83.0/build/stlite.js";
+
+      // The app and its data load from this repository, so this page always matches app.py.
+      mount(
+        {
+          requirements: ["plotly"],
+          entrypoint: "app.py",
+          files: {
+            "app.py": { url: "./app.py" },
+            "nrc_model.py": { url: "./nrc_model.py" },
+            "cleaned_violations_data.csv": { url: "./cleaned_violations_data.csv" },
+            "model_coefficients.json": { url: "./model_coefficients.json" },
+          },
+        },
+        document.getElementById("root"),
+      );
+    </script>
+  </body>
+</html>
