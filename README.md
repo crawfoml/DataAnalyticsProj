@@ -6,7 +6,7 @@ This project is an end-to-end exploratory data analysis (EDA) of the NRC Inspect
 **Short answer.** Yes for how many findings a site gets, and only weakly for how serious they are.
 
 ## Live dashboard
-Explore the interactive dashboard here: **https://crawfoml.github.io/DataAnalyticsProj/**. It runs entirely in your browser and takes about a minute to load the first time.
+Explore the interactive dashboard here: **https://dataanalyticsproj-yqsjjbacanxc9y2ezflz6a.streamlit.app/**
 
 The dashboard has four tabs. **The question** gives the answer and the national trend. **Site history** shows any site's findings per year next to the model's one-year-ahead prediction. **Severity risk** estimates the chance that a new finding is high-severity, starting from the chosen site's own recent history. **Explore findings** has the filterable charts and data table. The dashboard fits no models. It reads the coefficients the notebook saves, so its numbers match the analysis.
 
