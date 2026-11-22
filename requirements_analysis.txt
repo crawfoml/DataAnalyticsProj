@@ -1,0 +1,9 @@
+# Extra packages for the regression analysis notebook (not needed by the Streamlit app)
+-r requirements.txt
+statsmodels
+scikit-learn
+matplotlib
+seaborn
+scipy
+jupyter
+openpyxl
